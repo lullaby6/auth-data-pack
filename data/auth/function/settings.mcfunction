@@ -18,8 +18,8 @@ execute if score max_attemps auth.settings matches 1 run tellraw @s [{"text":"- 
 execute if score max_attemps auth.settings matches 2 run tellraw @s [{"text":"- Max Attemps: ","color":"gray"},{"text":"1","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/1"}},{"text": " - ","color":"gray"},{"text":"2","color":"green","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/2"}},{"text": " - ","color":"gray"},{"text":"3","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/3"}}]
 execute if score max_attemps auth.settings matches 3 run tellraw @s [{"text":"- Max Attemps: ","color":"gray"},{"text":"1","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/1"}},{"text": " - ","color":"gray"},{"text":"2","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/2"}},{"text": " - ","color":"gray"},{"text":"3","color":"green","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/3"}}]
 
-tellraw @s {"text":"- Reset Settings","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset"}}
-
-tellraw @s {"text":"- Reset All Players","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_all_players"}}
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset Settings","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset"}}]
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset All Players","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_all_players"}}]
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Disable Data-Pack","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:disable"}}]
 
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ .5 2

@@ -38,6 +38,18 @@ Reset all player:
 /function auth:auth/reset_all_players
 ```
 
+Disable the Data-Pack:
+
+```mcfunction
+/function auth:disable
+```
+
+And enable it:
+
+```mcfunction
+/datapack enable "file/auth-data-pack"
+```
+
 ### Settings
 
 To see te settings menu use te command:

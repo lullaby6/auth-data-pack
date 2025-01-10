@@ -7,3 +7,5 @@ scoreboard objectives add auth.leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add login trigger
 scoreboard objectives add register trigger
 scoreboard objectives add change_password trigger
+
+gamerule sendCommandFeedback false

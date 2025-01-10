@@ -1,6 +1,7 @@
 # Auth Data-Pack
 
-Login and Register Authorization Data-Pack for Minecraft.
+Login and Register Authorization Data-Pack.
+Version: 1.21.X
 
 ## Commands
 
@@ -53,3 +54,7 @@ and to remove it, use:
 ```
 /tag <player> remove auth.bypass
 ```
+
+## License
+
+MIT

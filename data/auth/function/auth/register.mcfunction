@@ -6,5 +6,6 @@ trigger register add 0
 execute store result score @s login run scoreboard players get @s register
 
 tag @s add auth.registered
+tag @s add auth.logged
 
-playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ .5 1

@@ -8,4 +8,4 @@ scoreboard players reset @s auth.kick_time
 
 scoreboard players reset @s auth.leave
 
-trigger changepassword add 0
+trigger change_password add 0

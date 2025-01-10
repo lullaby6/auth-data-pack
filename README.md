@@ -1,18 +1,9 @@
-<div align="center">
+# Auth Data-Pack
 
-# Auth
+Login and Register Authorization Data-Pack for Minecraft.
 
-Login and Register Authorization Datapack for Minecraft
+## Commands
 
-</div>
-
-## Installation
-
-
-After [Download](https://github.com/LucianoBrumer/Auth/releases/download/release/Auth.zip) the datapack, move it into the folder "datapacks" in your world folder.
-
-
-## Usage
 Register with:
 
 ```
@@ -25,25 +16,40 @@ Login with:
 /trigger login set <your password>
 ```
 
-Change password with (you need to be logged):
+Change password with (need to be logged):
 
 ```
-/trigger changepassword set <new password>
+/trigger change_password set <new password>
 ```
 
-### Configuration
+### Admin:
+
+Reset player:
+
+/execute as <player> run function auth:auth/reset
+
+Reset all player:
+
+/function auth:auth/reset_all_players
+
+### Settings
+
 To see te settings menu use te command:
+
 ```
 /function auth:settings
 ```
 
-### Auth Bypass
+### Bypass
+
 To give a authentication bypass to a player use te command:
+
 ```
 /tag <player> add auth.bypass
 ```
 
 and to remove it, use:
+
 ```
 /tag <player> remove auth.bypass
 ```

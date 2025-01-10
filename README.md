@@ -1,6 +1,7 @@
 # Auth Data-Pack
 
 Login and Register Authorization Data-Pack.
+
 Version: 1.21.X
 
 ## Commands

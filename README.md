@@ -1,6 +1,6 @@
-# Auth Data-Pack
+# Auth
 
-Login and Register Authorization Data-Pack.
+Login and Register Authorization.
 
 Version: 1.21.X
 

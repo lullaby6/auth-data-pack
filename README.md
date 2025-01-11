@@ -1,6 +1,6 @@
 # Auth
 
-Login and Register Authorization.
+Login and Register Authorization
 
 Version: 1.21.X
 

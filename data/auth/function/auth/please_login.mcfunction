@@ -12,4 +12,7 @@ execute if score login_blindness auth.settings matches 1 run effect give @s blin
 execute unless entity @e[tag=auth.marker.login,distance=..3] run summon marker ~ ~ ~ {Tags:["auth.marker.login"]}
 tp @s @n[tag=auth.marker.login]
 
+execute unless entity @s[tag=auth.pos.loaded] run function auth:auth/pos/load
+execute if entity @s[tag=auth.pos.loaded] run function auth:auth/pos/check
+
 title @s actionbar {"text":"Login with \"/trigger login set <your password>\".","color":"red"}

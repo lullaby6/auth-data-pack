@@ -10,4 +10,8 @@ execute store result score @s login run scoreboard players get @s register
 tag @s add auth.registered
 tag @s add auth.logged
 
+scoreboard players reset @s auth.pos.x
+scoreboard players reset @s auth.pos.y
+scoreboard players reset @s auth.pos.z
+
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ .5 1

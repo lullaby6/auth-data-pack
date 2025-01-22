@@ -2,7 +2,7 @@
 
 Login and Register Authorization
 
-Version: 1.21.X
+Version: `1.21.X`
 
 ## Commands
 

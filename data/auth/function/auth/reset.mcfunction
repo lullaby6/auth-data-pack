@@ -14,3 +14,11 @@ tag @a remove auth.registered
 tag @a remove auth.logged
 tag @a remove auth.bypass
 tag @a remove auth.bypass.logged
+
+scoreboard players reset @s auth.pos.x
+scoreboard players reset @s auth.pos.y
+scoreboard players reset @s auth.pos.z
+scoreboard players reset @s auth.pos.check.x
+scoreboard players reset @s auth.pos.check.y
+scoreboard players reset @s auth.pos.check.z
+tag @a remove auth.pos.loaded

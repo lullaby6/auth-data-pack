@@ -47,7 +47,7 @@ Disable the Data-Pack:
 And enable it:
 
 ```mcfunction
-/datapack enable "file/auth-data-pack"
+/datapack enable "auth"
 ```
 
 ### Settings

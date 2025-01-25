@@ -1,6 +1,7 @@
 scoreboard objectives add auth.settings dummy
 scoreboard objectives add auth.attemps dummy
 scoreboard objectives add auth.kick_time dummy
+execute unless score load auth.settings matches 1 run function auth:settings/reset
 
 scoreboard objectives add auth.pos.x dummy
 scoreboard objectives add auth.pos.y dummy

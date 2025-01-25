@@ -24,7 +24,7 @@ Change password with (need to be logged):
 /trigger change_password set <new password>
 ```
 
-### Admin:
+### Admin
 
 Reset player:
 
@@ -38,16 +38,16 @@ Reset all player:
 /function auth:auth/reset_all_players
 ```
 
-Disable the Data-Pack:
+Disable:
 
 ```mcfunction
 /function auth:disable
 ```
 
-And enable it:
+Enable:
 
 ```mcfunction
-/datapack enable "auth"
+/datapack enable "file/auth.zip"
 ```
 
 ### Settings

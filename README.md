@@ -2,9 +2,14 @@
 
 Login and Register Authorization
 
+WARNING:
+In vanilla we cannot use /kick, so I use many particles to kick (game crash) a malicious player, but you can disable it by disabling kick in `/function auth:settings`.
+
 Version: `1.21.X`
 
 ## Commands
+
+### Player
 
 Register with:
 
@@ -52,7 +57,7 @@ Enable:
 
 ### Settings
 
-To see te settings menu use te command:
+To see the settings menu use the command:
 
 ```mcfunction
 /function auth:settings
@@ -60,7 +65,7 @@ To see te settings menu use te command:
 
 ### Bypass
 
-To give a authentication bypass to a player use te command:
+To give a authentication bypass to a player use the command:
 
 ```mcfunction
 /tag <player> add auth.bypass

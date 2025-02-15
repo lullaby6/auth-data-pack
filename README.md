@@ -88,4 +88,4 @@ and to remove it, use:
 
 ## 🪪 License
 
-MIT
+[MIT](https://github.com/lullaby6/auth-data-pack?tab=MIT-1-ov-file)

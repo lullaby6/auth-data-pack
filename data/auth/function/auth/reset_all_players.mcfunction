@@ -17,3 +17,4 @@ tag @a remove auth.registered
 tag @a remove auth.logged
 tag @a remove auth.bypass
 tag @a remove auth.bypass.logged
+tag @a remove auth.pos.loaded

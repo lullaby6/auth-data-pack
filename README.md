@@ -1,5 +1,15 @@
 # Auth
 
+[![Latest Version](https://img.shields.io/github/v/release/lullaby6/auth-data-pack?color=blueviolet&logo=github "View latest release")](https://github.com/lullaby6/auth-data-pack/releases) 
+[![Discord Badge](https://img.shields.io/discord/1327308441324097681?label=discord&color=blue&logo=discord "Join our Discord Server")](https://discord.gg/5UdcDa5xNC) 
+[![Modrinth Badge](https://img.shields.io/modrinth/dt/auth?label=modrinth&logo=modrinth "View our Modrinth page")](https://modrinth.com/datapack/auth) 
+[![License Badge](https://img.shields.io/badge/license-mit-green "View the License")](https://github.com/lullaby6/auth-data-pack/blob/main/LICENSE) 
+[![Issues Badge](https://img.shields.io/github/issues/lullaby6/auth-data-pack?color=orange&logo=github "View or open an issue")](https://github.com/lullaby6/auth-data-pack/issues)
+
+![bg](https://raw.githubusercontent.com/lullaby6/auth-data-pack/refs/heads/main/images/bg.png)
+
+## 📖 Description
+
 Login and Register Authorization
 
 Version: `1.21.X`
@@ -88,4 +98,4 @@ and to remove it, use:
 
 ## 🪪 License
 
-[MIT](https://github.com/lullaby6/auth-data-pack?tab=MIT-1-ov-file)
+[MIT](https://github.com/lullaby6/auth-data-pack/blob/main/LICENSE)

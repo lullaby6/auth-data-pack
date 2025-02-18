@@ -1,5 +1,3 @@
-execute if entity @s[tag=!auth.load] run return run function auth:player/load
-
 execute if entity @s[tag=auth.registered] unless score @s register matches 1.. run return run function auth:auth/reset
 
 execute if entity @s[tag=!auth.registered,tag=!auth.bypass] run return run function auth:auth/please_register

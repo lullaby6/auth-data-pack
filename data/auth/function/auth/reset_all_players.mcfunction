@@ -12,7 +12,7 @@ execute as @a run trigger login add 0
 execute as @a run trigger register add 0
 execute as @a run trigger change_password add 0
 
-tag @a remove auth.load
+advancement revoke @s only auth:tick
 tag @a remove auth.registered
 tag @a remove auth.logged
 tag @a remove auth.bypass

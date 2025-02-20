@@ -109,26 +109,31 @@ and to remove it, use:
 
 ### Custom messages
 
-You can change the messages and the message colors.
+You can change the messages and the message color.
 
-List of options:
-- `please_register_text`
-- `please_register_color`
-- `register_success_text`
-- `register_success_color`
-- `please_login_text`
-- `please_login_color`
-- `login_success_text`
-- `login_success_color`
-- `wrong_password_text`
-- `wrong_password_color`
-- `password_changed_text`
-- `password_changed_color`
+<details>
+    <summary>List of options</summary>
+    Every armor piece have:
+    <ul>
+        <li><code>please_register_text</code></li>
+        <li><code>please_register_color</code></li>
+        <li><code>register_success_text</code></li>
+        <li><code>register_success_color</code></li>
+        <li><code>please_login_text</code></li>
+        <li><code>please_login_color</code></li>
+        <li><code>login_success_text</code></li>
+        <li><code>login_success_color</code></li>
+        <li><code>wrong_password_text</code></li>
+        <li><code>wrong_password_color</code></li>
+        <li><code>password_changed_text</code></li>
+        <li><code>password_changed_color</code></li>
+    </ul>
+</details>
 
 Syntax:
 
 ```mcfunction
-/data modify storage auth:config <option> set value "<text>"
+/data modify storage auth:config <option> set value "<value>"
 ```
 
 Example for spanish:

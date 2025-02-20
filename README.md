@@ -107,6 +107,37 @@ and to remove it, use:
 /tag <player> remove auth.bypass
 ```
 
+### Custom messages
+
+You can change the messages and the message colors.
+
+List of options:
+- `please_register_text`
+- `please_register_color`
+- `register_success_text`
+- `register_success_color`
+- `please_login_text`
+- `please_login_color`
+- `login_success_text`
+- `login_success_color`
+- `wrong_password_text`
+- `wrong_password_color`
+- `password_changed_text`
+- `password_changed_color`
+
+Syntax:
+
+```mcfunction
+/data modify storage auth:config <option> set value "<text>"
+```
+
+Example for spanish:
+
+```mcfunction
+/data modify storage auth:config please_register_text set value "Registrese con /trigger register set <contraseña>"
+/data modify storage auth:config please_register_color set value "gray"
+```
+
 ## 🪪 License
 
 [MIT](https://github.com/lullaby6/auth-data-pack/blob/main/LICENSE)

@@ -1,4 +1,4 @@
-execute if score clear_chat auth.settings matches 1 run tellraw @a ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"]
+execute if score clear_chat auth.settings matches 1 run function auth:utils/clear_chat
 
 gamemode survival @s
 effect clear @s blindness
@@ -15,3 +15,5 @@ scoreboard players reset @s auth.pos.y
 scoreboard players reset @s auth.pos.z
 
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ .5 1
+
+function auth:messages/register_success with storage auth:config

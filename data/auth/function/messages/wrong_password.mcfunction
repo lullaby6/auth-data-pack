@@ -1,0 +1,1 @@
+$tellraw @s {"text":"$(wrong_password_text)","color":"$(wrong_password_color)"}

@@ -1,7 +1,8 @@
 scoreboard players set @s login 0
 
-tellraw @s {"text":"Wrong password.","color":"red"}
-playsound minecraft:entity.villager.no master @s ~ ~ ~
+function auth:messages/wrong_password with storage auth:config
+
+playsound minecraft:entity.villager.no master @s ~ ~ ~ 1.5 1.5
 
 execute if score kick auth.settings matches 1 run scoreboard players add @s auth.attemps 1
 

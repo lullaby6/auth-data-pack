@@ -1,7 +1,6 @@
 scoreboard objectives add auth.settings dummy
 scoreboard objectives add auth.attemps dummy
 scoreboard objectives add auth.kick_time dummy
-execute unless score load auth.settings matches 1 run function auth:settings/reset
 
 scoreboard objectives add auth.pos.x dummy
 scoreboard objectives add auth.pos.y dummy
@@ -18,3 +17,6 @@ scoreboard objectives add register trigger
 scoreboard objectives add change_password trigger
 
 gamerule sendCommandFeedback false
+
+execute unless score load auth.settings matches 1 run return run function auth:settings/reset
+execute unless data storage auth:config please_register_text run return run function auth:settings/reset

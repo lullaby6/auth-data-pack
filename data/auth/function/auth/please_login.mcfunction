@@ -12,7 +12,7 @@ execute if score kick auth.settings matches 1 if score kick_time auth.settings m
 execute unless entity @e[tag=auth.marker.login,distance=..3] run summon marker ~ ~ ~ {Tags:["auth.marker.login"]}
 tp @s @n[tag=auth.marker.login,distance=..3]
 
-title @s actionbar {"text":"Login with \"/trigger login set <your password>\".","color":"red"}
+function auth:messages/please_login with storage auth:config
 
 execute if entity @s[tag=auth.pos.loaded] run return run function auth:auth/pos/check
 function auth:auth/pos/load

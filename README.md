@@ -113,7 +113,6 @@ You can change the messages and the message color.
 
 <details>
     <summary>List of options</summary>
-    Every armor piece have:
     <ul>
         <li><code>please_register_text</code></li>
         <li><code>please_register_color</code></li>

@@ -3,7 +3,7 @@ scoreboard players reset @s login
 scoreboard players reset @s change_password
 scoreboard players reset @s auth.leave
 scoreboard players reset @s auth.attemps
-scoreboard players reset @s auth.kick_time
+scoreboard players reset @s auth.kick_delay
 
 trigger login add 0
 trigger register add 0

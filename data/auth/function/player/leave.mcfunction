@@ -13,6 +13,6 @@ tag @s remove auth.logged
 scoreboard players set @s login 0
 
 scoreboard players reset @s auth.attemps
-scoreboard players reset @s auth.kick_time
+scoreboard players reset @s auth.kick_delay
 
 trigger change_password add 0

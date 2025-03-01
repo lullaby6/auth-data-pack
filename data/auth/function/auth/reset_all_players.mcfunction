@@ -5,7 +5,7 @@ scoreboard players reset * login
 scoreboard players reset * register
 scoreboard players reset * change_password
 scoreboard players reset * auth.leave
-scoreboard players reset * auth.kick_time
+scoreboard players reset * auth.kick_delay
 scoreboard players reset * auth.attemps
 
 execute as @a run trigger login add 0

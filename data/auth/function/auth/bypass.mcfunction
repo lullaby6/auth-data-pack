@@ -4,4 +4,4 @@ title @s actionbar ""
 
 trigger login add 0
 
-tag @s add auth.bypass.logged
+tag @s add auth.logged

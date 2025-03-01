@@ -1,28 +1,48 @@
 function auth:utils/clear_chat
 
-tellraw @s [{"text":"Auth ","color":"green"},{"text":"Settings:","color":"gray"}]
+tellraw @s [{"text":"==========[ ","color":"gray"},{"text":"AUTH","color":"white","bold":true},{"text":" ]==========","color":"gray"}]
 
-execute if score kick auth.settings matches 1 run tellraw @s [{"text":"- Kick: ","color":"gray"},{"text":"YES","color":"green"},{"text": " - ","color":"gray"},{"text":"NO","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/kick/no"}}]
-execute if score kick auth.settings matches 0 run tellraw @s [{"text":"- Kick: ","color":"gray"},{"text":"YES","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/kick/yes"}},{"text": " - ","color":"gray"},{"text":"NO","color":"green"}]
+tellraw @s ""
 
-execute if score login_blindness auth.settings matches 1 run tellraw @s [{"text":"- Login Blindness: ","color":"gray"},{"text":"YES","color":"green"},{"text": " - ","color":"gray"},{"text":"NO","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/no"}}]
-execute if score login_blindness auth.settings matches 0 run tellraw @s [{"text":"- Login Blindness: ","color":"gray"},{"text":"YES","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/yes"}},{"text": " - ","color":"gray"},{"text":"NO","color":"green"}]
+tellraw @s {"color":"gray","text":"Settings:","underlined":true}
 
-execute if score register_blindness auth.settings matches 1 run tellraw @s [{"text":"- Register Blindness: ","color":"gray"},{"text":"YES","color":"green"},{"text": " - ","color":"gray"},{"text":"NO","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/register_blindness/no"}}]
-execute if score register_blindness auth.settings matches 0 run tellraw @s [{"text":"- Register Blindness: ","color":"gray"},{"text":"YES","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/register_blindness/yes"}},{"text": " - ","color":"gray"},{"text":"NO","color":"green"}]
+tellraw @s ""
 
-execute if score kick_time auth.settings matches 1 run tellraw @s [{"text":"- Kick Time (60 seconds): ","color":"gray"},{"text":"YES","color":"green"},{"text": " - ","color":"gray"},{"text":"NO","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/kick_time/no"}}]
-execute if score kick_time auth.settings matches 0 run tellraw @s [{"text":"- Kick Time (60 seconds): ","color":"gray"},{"text":"YES","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/kick_time/yes"}},{"text": " - ","color":"gray"},{"text":"NO","color":"green"}]
+execute if score kick auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Kick: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable kick"}]},"text":"ENABLED"}]
+execute if score kick auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Kick: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable kick"}]},"text":"DISABLED"}]
 
-execute if score max_attemps auth.settings matches 1 run tellraw @s [{"text":"- Max Attemps: ","color":"gray"},{"text":"1","color":"green","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/1"}},{"text": " - ","color":"gray"},{"text":"2","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/2"}},{"text": " - ","color":"gray"},{"text":"3","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/3"}}]
-execute if score max_attemps auth.settings matches 2 run tellraw @s [{"text":"- Max Attemps: ","color":"gray"},{"text":"1","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/1"}},{"text": " - ","color":"gray"},{"text":"2","color":"green","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/2"}},{"text": " - ","color":"gray"},{"text":"3","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/3"}}]
-execute if score max_attemps auth.settings matches 3 run tellraw @s [{"text":"- Max Attemps: ","color":"gray"},{"text":"1","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/1"}},{"text": " - ","color":"gray"},{"text":"2","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/2"}},{"text": " - ","color":"gray"},{"text":"3","color":"green","clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/3"}}]
+execute if score kick auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Max Attemps: "},{"color":"aqua","bold":true,"text":"- ","hoverEvent":{"action":"show_text","value":[{"text":"Click to remove 1 from max attemps"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/remove"}},{"color":"green","bold":true,"score":{"name":"max_attemps","objective":"auth.settings"},"hoverEvent":{"action":"show_text","value":[{"text":"To change run: /scoreboard players set max_attemps auth.settings <max_attemps>"}]}},{"color":"aqua","bold":true,"text":" +","hoverEvent":{"action":"show_text","value":[{"text":"Click to add 1 to max attemps"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/max_attemps/add"}}]
 
-execute if score clear_chat auth.settings matches 1 run tellraw @s [{"text":"- Clear Chat: ","color":"gray"},{"text":"YES","color":"green"},{"text": " - ","color":"gray"},{"text":"NO","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/clear_chat/no"}}]
-execute if score clear_chat auth.settings matches 0 run tellraw @s [{"text":"- Clear Chat: ","color":"gray"},{"text":"YES","color":"gray","clickEvent":{"action":"run_command","value":"/function auth:settings/clear_chat/yes"}},{"text": " - ","color":"gray"},{"text":"NO","color":"green"}]
+execute if score kick auth.settings matches 1 if score kick_time auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Kick Time: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_time/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable kick time"}]},"text":"ENABLED"}]
+execute if score kick auth.settings matches 1 if score kick_time auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Kick Time: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_time/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable kick time"}]},"text":"DISABLED"}]
 
-tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset Settings","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset"}}]
-tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset All Players","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_all_players"}}]
-tellraw @s [{"text":"- ","color":"gray"},{"text":"Disable Data-Pack","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":""}]},"clickEvent":{"action":"run_command","value":"/function auth:disable"}}]
+execute if score login_blindness auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Login Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable login blindness"}]},"text":"ENABLED"}]
+execute if score login_blindness auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Login Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable login blindness"}]},"text":"DISABLED"}]
+
+execute if score register_blindness auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Register Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/register_blindness/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable register blindness"}]},"text":"ENABLED"}]
+execute if score register_blindness auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Register Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/register_blindness/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable register blindness"}]},"text":"DISABLED"}]
+
+execute if score clear_chat auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Clear Chat: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/clear_chat/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable clear chat"}]},"text":"ENABLED"}]
+execute if score clear_chat auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Clear Chat: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/clear_chat/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable clear chat"}]},"text":"DISABLED"}]
+
+tellraw @s ""
+
+tellraw @s {"color":"gray","text":"Commands:","underlined":true}
+
+tellraw @s ""
+
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset All Players","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to reset all players"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_all_players"}}]
+
+tellraw @s ""
+
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Disable Data-Pack","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to disable"}]},"clickEvent":{"action":"run_command","value":"/function auth:disable"}}]
+
+tellraw @s ""
+
+tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset Settings","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to reset settings"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset"}}]
+
+tellraw @s ""
+
+tellraw @s [{"text":"===========","color":"gray"},{"text":"====","color":"gray"},{"text":"===========","color":"gray"}]
 
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ .5 2

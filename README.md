@@ -73,6 +73,18 @@ Show/get player password:
 /gamerule sendCommandFeedback false
 ```
 
+Set kick delay time (20 ticks = 1 second):
+
+```mcfunction
+/scoreboard players set kick_delay_time auth.settings <ticks>
+```
+
+Set max attemps:
+
+```mcfunction
+/scoreboard players set max_attemps auth.settings <max_attemps>
+```
+
 Disable:
 
 ```mcfunction

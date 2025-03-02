@@ -1,12 +1,12 @@
 scoreboard players reset @s auth.leave
 
+tag @s remove auth.pos.loaded
 scoreboard players reset @s auth.pos.x
 scoreboard players reset @s auth.pos.y
 scoreboard players reset @s auth.pos.z
 scoreboard players reset @s auth.pos.check.x
 scoreboard players reset @s auth.pos.check.y
 scoreboard players reset @s auth.pos.check.z
-tag @a remove auth.pos.loaded
 
 tag @s remove auth.logged
 

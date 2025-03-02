@@ -1,6 +1,7 @@
 function auth:utils/clear_chat
 
 tellraw @s [{"text":"==========[ ","color":"gray"},{"text":"AUTH","color":"white","bold":true},{"text":" ]==========","color":"gray"}]
+tellraw @s [{"color":"gray","text":"Version: "},{"color":"aqua","text":"v1.4.0"}]
 
 tellraw @s ""
 
@@ -15,6 +16,8 @@ execute if score kick auth.settings matches 1 run tellraw @s [{"color":"gray","t
 
 execute if score kick auth.settings matches 1 if score kick_delay auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Kick Delay: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_delay/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable kick delay"}]},"text":"ENABLED"}]
 execute if score kick auth.settings matches 1 if score kick_delay auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Kick Delay: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_delay/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable kick delay"}]},"text":"DISABLED"}]
+
+execute if score kick auth.settings matches 1 if score kick_delay auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Kick Delay Time: "},{"color":"aqua","bold":true,"text":"- ","hoverEvent":{"action":"show_text","value":[{"text":"Click to remove 1s from kick delay time"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_delay_time/remove"}},{"color":"green","bold":true,"score":{"name":"kick_delay_time","objective":"auth.settings"},"hoverEvent":{"action":"show_text","value":[{"text":"To change run: /scoreboard players set kick_delay_time auth.settings <max_attemps>"}]}},{"color":"aqua","bold":true,"text":" +","hoverEvent":{"action":"show_text","value":[{"text":"Click to add 1s to kick delay time"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/kick_delay_time/add"}}]
 
 execute if score login_blindness auth.settings matches 1 run tellraw @s [{"color":"gray","text":"- Login Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/no"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable login blindness"}]},"text":"ENABLED"}]
 execute if score login_blindness auth.settings matches 0 run tellraw @s [{"color":"gray","text":"- Login Blindness: "},{"bold":true,"clickEvent":{"action":"run_command","value":"/function auth:settings/login_blindness/yes"},"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable login blindness"}]},"text":"DISABLED"}]

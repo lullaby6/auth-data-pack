@@ -36,15 +36,9 @@ tellraw @s ""
 
 tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset All Players","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to reset all players"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_all_players"}}]
 
-tellraw @s ""
-
 tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset Messages","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to reset messages"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset_messages"}}]
 
-tellraw @s ""
-
 tellraw @s [{"text":"- ","color":"gray"},{"text":"Disable Data-Pack","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to disable"}]},"clickEvent":{"action":"run_command","value":"/function auth:disable"}}]
-
-tellraw @s ""
 
 tellraw @s [{"text":"- ","color":"gray"},{"text":"Reset Settings","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to reset settings"}]},"clickEvent":{"action":"run_command","value":"/function auth:settings/reset"}}]
 

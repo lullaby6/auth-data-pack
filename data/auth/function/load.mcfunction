@@ -18,5 +18,5 @@ scoreboard objectives add change_password trigger
 
 gamerule sendCommandFeedback false
 
-execute unless score load auth.settings matches 1 run return run function auth:settings/reset
-execute unless data storage auth:config please_register_text run return run function auth:messages/reset
+execute unless score load auth.settings matches 1 run function auth:settings/reset
+execute unless data storage auth:config please_register_text run function auth:messages/reset

@@ -1,12 +1,12 @@
 kill @e[tag=auth.marker.register]
 kill @e[tag=auth.marker.login]
 
-scoreboard players reset * login
-scoreboard players reset * register
-scoreboard players reset * change_password
-scoreboard players reset * auth.leave
-scoreboard players reset * auth.kick_delay
-scoreboard players reset * auth.attemps
+scoreboard players reset @a login
+scoreboard players reset @a register
+scoreboard players reset @a change_password
+scoreboard players reset @a auth.leave
+scoreboard players reset @a auth.kick_delay
+scoreboard players reset @a auth.attemps
 
 execute as @a run trigger login add 0
 execute as @a run trigger register add 0

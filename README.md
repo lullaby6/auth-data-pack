@@ -15,19 +15,9 @@
 
 Login and Register Authorization
 
-Version: `1.21.X`
-
 ## ⚠️ Warning
 
-In vanilla we cannot use /kick, so I use many particles to kick (game crash) a malicious player, but you can disable it by disabling kick in `/function auth:settings`.
-
-## 📂 Installation
-
-Move the downloaded file in the path `.minecraft/saves/[world]/datapacks`
-
-## 👾 Bugs/Issues
-
-Please report any bug/issues to the [Discord Server](https://discord.gg/5UdcDa5xNC) in the `bugs` channel, or create a issue in the [Github Repostiroy](https://github.com/lullaby6/auth-data-pack/issues), or a comment in [Planet Minecraft](https://www.planetminecraft.com/data-pack/auth-datapack-login-and-register-authentication-full-customizable-kick-time-attempls-blindness-option-bypass/).
+In vanilla we cannot use /kick, so I use many particles to kick (game crash) a malicious player, but you can disable it by disabling kick in `/function auth:config`.
 
 ## ⌨️ Commands
 
@@ -76,13 +66,13 @@ Show/get player password:
 Set kick delay time (20 ticks = 1 second):
 
 ```mcfunction
-/scoreboard players set kick_delay_time auth.settings <ticks>
+/scoreboard players set kick_delay_time auth.config <ticks>
 ```
 
 Set max attemps:
 
 ```mcfunction
-/scoreboard players set max_attemps auth.settings <max_attemps>
+/scoreboard players set max_attemps auth.config <max_attemps>
 ```
 
 Disable:
@@ -97,12 +87,12 @@ Enable:
 /datapack enable "file/auth.zip"
 ```
 
-### Settings
+### Config
 
-To see the settings menu use the command:
+To see the config menu use the command:
 
 ```mcfunction
-/function auth:settings
+/function auth:config
 ```
 
 ### Bypass

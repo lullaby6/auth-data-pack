@@ -1,4 +1,4 @@
-execute if score clear_chat auth.settings matches 1 run function auth:utils/clear_chat
+execute if score clear_chat auth.config matches 1 run function auth:utils/clear_chat
 
 gamemode survival @s
 effect clear @s blindness

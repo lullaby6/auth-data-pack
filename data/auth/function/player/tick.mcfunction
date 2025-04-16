@@ -8,4 +8,6 @@ execute if entity @s[tag=auth.logged] run return run function auth:player/tick/l
 
 execute unless score @s register matches 1.. run return run function auth:auth/please_register
 
-execute if score @s register matches 1.. if entity @s[tag=!auth.logged] run return run function auth:auth/please_login
+execute if score @s register matches 1.. unless entity @s[tag=auth.registered] run return run function auth:auth/register
+
+execute if score @s register matches 1.. unless entity @s[tag=auth.logged] run return run function auth:auth/please_login

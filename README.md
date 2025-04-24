@@ -146,4 +146,4 @@ Example for spanish:
 
 ## 🪪 License
 
-[Limited Embed License v1.0](https://github.com/lullaby6/auth-data-pack/blob/main/LICENSE)
+[AGPLv3](https://github.com/lullaby6/auth-data-pack/blob/main/LICENSE)
